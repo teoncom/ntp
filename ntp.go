@@ -56,7 +56,7 @@ func Time(server string) (time.Time, error) {
 	defer conn.Close()
 
 	// Set a timeout for the entire operation
-	if err := conn.SetDeadline(time.Now().Add(5 * time.Second)); err != nil {
+	if err := conn.SetDeadline(time.Now().Add(3 * time.Second)); err != nil {
 		return time.Time{}, fmt.Errorf("error setting deadline: %v", err)
 	}
 
